@@ -19,7 +19,13 @@ int main(void)
 
 int countCharacter(string input)
 {
-	int numofcharacters;
-	numofcharacters = str.length();
-	return numofcharacters;
+	int numOfVowels = 0;
+	for (int i = 0; i < input.length(); i++)
+	{
+		if (input[i] == 'a' or input[i] == 'e' or input[i] == 'i' or input[i] == 'o' or input[i] == 'u' or input[i] == 'A' or input[i] == 'E' or input[i] == 'I' or input[i] == 'O' or input[i] == 'U')
+		{
+			numOfVowels++;
+		}
+	}
+	return numOfVowels;
 }
