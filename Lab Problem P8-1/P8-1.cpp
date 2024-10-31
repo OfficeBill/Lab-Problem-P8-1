@@ -1,7 +1,7 @@
-// File Name:     Lab Problem 8.1
-// Author:        William Inkrott
-// Date:          10/31/24
-// Description:   Determine the number of vowels in an inputted character. 
+// File Name:     Lab Problem 8.1
+// Author:        William Inkrott
+// Date:          10/31/24
+// Description:   Determine the number of vowels in an inputted character. 
 
 #include <iostream>
 #include <cmath>
@@ -10,14 +10,23 @@
 #include <ctime>
 
 using namespace std;
-int countCharacter(string str);
+int countVowel(string str);
 
 int main(void)
 {
-	
+	string input;
+	int numVowels;
+	while (true) {
+		cout << "Enter a string or Q to quit: ";
+		cin >> input;
+		if (input == "Q") break;
+		numVowels = countVowel(input);
+		cout << "Vowel Count: " << numVowels << endl;
+	}
+	return 0;
 }
 
-int countCharacter(string input)
+int countVowel(string input)
 {
 	int numOfVowels = 0;
 	for (int i = 0; i < input.length(); i++)
